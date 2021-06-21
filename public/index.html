@@ -40,4 +40,31 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script src="https://www.paypal.com/sdk/js?client-id=ARwrWGZqd6CdNd5KFPAdO0BdgqZdXOX0OEWFJuvqoIa4uTLTxStl7XaejwbzR5_0aLcpJGG7Hc_nBUxg&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script>
+    paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal',
+          
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '150'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            // window.location.href = "https://calendly.com/jhosehp-rendon/30min"
+            // fbq('track', '5PackPaid')
+          });
+      }
+    }).render('#paypal-button-personalizado');
+  </script>
 </html>

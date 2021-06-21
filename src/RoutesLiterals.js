@@ -1,0 +1,30 @@
+const RoutesLiterals = {
+    retoCincoDias: "/reto-cinco-dias",
+    retoCincoDiasGracias: "/reto-cinco-dias-gracias",
+    programaPersonalizado: "/programa-personalizado",
+    programaPersonalizadoGracias: "/programa-personalizado-gracias",
+    login: "/login",
+    quiz: "/quiz",
+    quizResults: "/quiz-results",
+    symptoms: "/symptoms",
+    welcome: "/welcome",
+    profile: "/profile",
+    toolbox: "/suplementos",
+    brain: "/sistema-cerebral",
+    digest: "/sistema-digestivo",
+    detox: "/sistema-detox",
+    blood: "/sangre-insulina",
+    hormone: "/sistema-hormonal",
+    muscle: "/sistema-muscular-oseo",
+    immune: "/sistema-autoimmune",
+    week1: "/programa-semana1",
+    week2: "/programa-semana2",
+    week3: "/programa-semana3",
+    week4: "/programa-semana4",
+    week5: "/programa-semana5",
+    week6: "/programa-semana6",
+    week7: "/programa-semana7",
+    week8: "/programa-semana8"
+  };
+  
+  export default RoutesLiterals;

@@ -1,0 +1,205 @@
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.quiz-results {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.systems {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.profile-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.subtitle-quiz {
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.subtitle-quiz-option {
+  font-weight: bold;
+  text-align: center;
+}
+
+.select-item {
+  padding: 20px;
+  height: 200px;
+  border: 2px solid transparent;
+  text-align: center;
+  cursor: pointer;
+}
+
+.select-item:hover {
+  height: 200px;
+  padding: 20px;
+  border: 2px solid #97D1D5;
+  background-color: #EAF6F7;
+  border-radius: 10px;
+}
+
+.select-item-quiz {
+  padding: 20px;
+  border: 2px solid #97D1D5;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 220px;
+  margin-right: 10px;
+  position: relative;
+  height: 150px;
+}
+
+.select-item-quiz:hover {
+  padding: 20px;
+  border: 2px solid #474B52;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 220px;
+  margin-right: 10px
+}
+
+.select-item-quiz:hover > .select-quiz {
+  border: 2px solid #474B52;
+  border-top: none;
+}
+
+.select-quiz {
+  background-color: #C1E4E6;
+  width: 220px;
+  position: absolute;
+  margin-left: -22px;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 2px solid #97D1D5;
+  border-top: none;
+  bottom: 0;
+  margin-bottom: -20px;
+}
+
+.progress-bar {
+  width: 70rem;
+}
+
+.link {
+  color: inherit;
+}
+
+.link:hover {
+  color: #277680;
+}
+
+.score-warn {
+  color: orange;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.score-normal {
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.score-some {
+  color: rgb(194, 194, 103);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.score-severe {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.leyend {
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+  text-align: left;
+}
+
+.leyend-card :first-child {
+  margin-top: 0px;
+
+}
+
+.leyend p {
+  font-size: 14px;
+}
+
+.leyend-normal {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: green;
+}
+
+.leyend-some {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: rgb(194, 194, 103);
+}
+
+.leyend-warn {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: orange;
+}
+
+.leyend-severe {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: red;
+}
+
+.profile-nav-buttons {
+  display: flex;
+}
+
+@media screen and (max-width: 1100px) {
+  .items {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-results, .profile-main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .systems {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .select-item-quiz:first-child {
+    margin-bottom: 50px;
+  }
+
+  .progress-bar {
+    width: 90%;
+  }
+
+  .profile-nav-buttons {
+    display: block;
+    text-align: center;
+  }
+}
