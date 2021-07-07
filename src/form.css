@@ -73,11 +73,11 @@
   color: white;
   border-radius: 20px;
   cursor: pointer;
-  height: 40px;
   margin-top: 10px;
   max-width: 400px;
   outline: none;
   font-size: 16px;
+  padding: 10px;
 }
 
 .primary-button:hover {
@@ -348,6 +348,16 @@ ul li::before {
   max-width: 600px;
 }
 
+.reto-video {
+  width: 560px; 
+  height: 315px;
+}
+
+.reto-button-control {
+  display: flex;
+  text-align: center;
+}
+
 @media screen and (max-width:900px) {
   .reto-content-layout img {
     display: none;
@@ -360,6 +370,10 @@ ul li::before {
 
   .reto-content {
     width: 90%;
+  }
+
+  .reto-video {
+    width: 100%;
   }
 
   .reto-content-layout-cta {
@@ -421,5 +435,23 @@ ul li::before {
 
   .moto {
     width: 230%;
+  }
+
+  .reto-button-control {
+    display: grid;
+  }
+
+  .week-container {
+    width: 100%;
+  }
+
+  .menu-card {
+    width: 100%;
+  }
+
+  .menu-card:hover {
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
   }
 }

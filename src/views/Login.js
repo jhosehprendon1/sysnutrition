@@ -26,12 +26,12 @@ const Login = ({logIn, loginError}) => {
   return (
     <div className="container-center login">
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
-        <p className="user-login full">User Login</p>
+        <p className="user-login full" style={{textAlign: "center"}}>Ingresa a tu Programa de Alimentación Antiinflamatoria Avanzado</p>
         <label htmlFor="email" className="full">
           <p>Email*</p>
           <input
             type='text'
-            placeholder='Ej.: johndoe@email.com'
+            placeholder='Ej.: carolina@email.com'
             ref={register({
               required: true,
               pattern: {
@@ -53,7 +53,7 @@ const Login = ({logIn, loginError}) => {
           />
           <p className={errors.password ? "error error-visible" : "error error-hidden"}>Ingresa tu password</p>
         </label>
-        <button type="submit" className="primary-button full">Login</button>
+        <button type="submit" className="primary-button full">Iniciar</button>
         <p className={loginError ? "error error-visible full" : "error error-hidden"}>{loginError} <br></br>Si lo olvidaste escribenos a carolita320@gmail.com</p>
       </form>
     </div>

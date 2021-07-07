@@ -15,11 +15,11 @@ const Profile = ({systemsScore, user}) => {
     db.collection("users").doc(user.uid).get().then((res) => {
       if(res.data()) {
         if (!res.data().quizCompleted) {
-          history.replace(RoutesLiterals.quiz);
+          history.replace(RoutesLiterals.welcomeProgram);
         }
         setSystemObject(res.data())
       } else {
-        history.replace(RoutesLiterals.quiz);
+        history.replace(RoutesLiterals.welcomeProgram);
       }
     })
   }, [])

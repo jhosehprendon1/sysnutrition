@@ -71,7 +71,8 @@ const Toolbox = ({systemsScore}) => {
     return (
       <div className="container-center">
         <h3>Tu Perfil Inflamatorio</h3>
-        <p style={{width: "80%", textAlign: "center", marginTop: "-10px", marginBottom: "40px"}}>Tu perfil inflamatorio esta determinado por los sistemas con puntaje en rojo. <br></br>Haz click en cada sistema para acceder a los suplmentos y super alimentos que te van a ayudar a mejorar.</p>
+        <p style={{width: "80%", textAlign: "center", marginTop: "-10px"}}>Tu perfil inflamatorio esta determinado por los sistemas con puntaje en rojo. <br></br>Haz click en cada sistema para acceder a los suplmentos y super alimentos que te van a ayudar a mejorar.</p>
+        <button type="submit" onClick={goBack} className="primary-button" style={{marginBottom: "20px", width: "150px"}}>Regresar</button>
         <div className="quiz-results">
           <div onClick={() => goToToolbox("brain")} className="profile-program-card" style={{width: "165px"}}>
             <p>Sistema <br></br>Cerebral</p>
@@ -102,7 +103,6 @@ const Toolbox = ({systemsScore}) => {
             <p className={checkSeverity(immuneScore)}>{immuneScore}</p>
           </div>
         </div>
-        <button type="submit" onClick={goBack} className="primary-button" style={{marginBottom: "20px", width: "150px"}}>Regresar</button>
       </div>
     )
   } else {

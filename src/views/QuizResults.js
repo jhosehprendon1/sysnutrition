@@ -66,7 +66,7 @@ const QuizResults = ({systemsScore}) => {
             <p>{showPoly()}</p>
             <p>{programToFollow()}</p>
           </div>
-          <button type="submit" onClick={sendToSymptoms} className="primary-button" style={{padding: "0 25px", marginBottom: "18px"}}>Continuar con el Programa</button>
+          <button type="submit" onClick={sendToSymptoms} className="primary-button" style={{padding: "10px 25px", marginBottom: "18px"}}>Continuar con el Programa</button>
         </div>
         <div className="quiz-content-card-total leyend-card">
         <div className="leyend">

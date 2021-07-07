@@ -19,7 +19,7 @@ export default function RetoCincoDias() {
     <>
       <div className="reto-content-layout">
         <div className="reto-content">
-          <h1>Si Tienes Problemas Digestivos, Descontrol de Peso, Alergias o Migrañas puede que tu Cuerpo esté en Proceso de Inflamación</h1>
+          <h1>Si Tienes Problemas Digestivos, Descontrol de Peso, Fatiga, Alergias o Migrañas puede que tu Cuerpo esté en Proceso de Inflamación</h1>
           <h2 style={{marginTop: "-5px"}}>Elimina los Síntomas de Raíz con una Alimentación Antiinflamatoria</h2>
           <p>Sigue el <span style={{fontWeight: "bold"}}>Reto Antiinflamatorio</span> por 5 Dias y comenzarás a ver cambios positivos en tu cuerpo.</p>
           <div className="reto-content-card">
@@ -30,7 +30,7 @@ export default function RetoCincoDias() {
               <li>Lista de alimentos inflamatorios que debes evitar</li>
               <li>Lista de alimentos antiinflamatorios que puedes incluir</li>
               <li>Acceso a grupo privado de Facebook donde podrás aclarar tus dudas</li>
-              <li>Videos que te ayudarán a crear hábitos y mantener una alimentación antiinflamatoria</li>
+              <li>Videos donde aprenderás las bases de una alimentación antiinflamatoria y prácticas que te ayudarán a obtener resultados</li>
             </ul>
           </div>
           <p className="reto-content-layout-cta">Regístrate en el Reto Gratis</p>

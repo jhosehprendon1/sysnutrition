@@ -19,6 +19,15 @@ body {
   min-height: 90vh;
 }
 
+.container-week {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 90vh;
+}
+
 .container-profile {
   min-height: 90vh;
 }
@@ -44,4 +53,13 @@ body {
 p {
   font-size: 18px;
   color: #383b41;
+}
+
+@media screen and (max-width:900px) { 
+  .container-week {
+    display: block;
+    margin: 0;
+    min-height: 90vh;
+    width: 80%;
+  }
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import quizQuestions from '../utils/quizQuestions';
+import {quizQuestionSpanish} from '../utils/quizQuestions';
 import ProgressBar from "@ramonak/react-progress-bar";
 import { useHistory } from "react-router-dom";
 import RoutesLiterals from "../RoutesLiterals";
@@ -86,7 +86,7 @@ const Quiz = ({sendScore}) => {
   const showButton = () => {
     if (state.step > 1) {
       return (
-        <button type="submit" onClick={resetQuiz} className="primary-button" style={{marginTop: "50px", padding: "0 25px"}}>Comenzar de nuevo</button>
+        <button type="submit" onClick={resetQuiz} className="primary-button" style={{marginTop: "50px", padding: "10px 25px"}}>Comenzar de nuevo</button>
       )
     }
   }
@@ -98,7 +98,7 @@ const Quiz = ({sendScore}) => {
       </div>
       <h3>{systemTerms[state.system].toUpperCase()}</h3>
       <div className="quiz-content-card">
-        <h3 style={{textAlign: "center"}}>{quizQuestions[state.step]}</h3>
+        <h3 style={{textAlign: "center"}}>{quizQuestionSpanish[state.step]}</h3>
         <p className="subtitle-quiz">Por favor haz click en una opción</p>
       </div>
       <div className="items">

@@ -35,7 +35,7 @@ export default function ProgramaPersonalizado() {
       <div style={{textAlign: "center"}}>
         <h2>¡Toma el Control de tu Salud!</h2>
         <h2>Elimina los Síntomas de Raíz con el Programa de Desinflamación Personalizado</h2>
-        <p><strong><span style={{textDecoration: 'line-through', color: 'red', fontSize: "20px"}}>$400</span></strong></p>
+        <p><strong><span style={{textDecoration: 'line-through', color: 'red', fontSize: "25px"}}>$400</span></strong></p>
         <p style={{marginTop: '-20px', color: '#00b300', fontSize: '40px'}}><strong>$150</strong></p>
       </div>
       <div id="paypal-button-personalizado" style={{textAlign: 'center', marginTop: '5px'}}></div>

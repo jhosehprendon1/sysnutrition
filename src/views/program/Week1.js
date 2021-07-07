@@ -48,16 +48,16 @@ const Week1 = () => {
   }
 
   const showArrow = (bool) => {
-    return bool ? <span style={{marginLeft: "5px"}}>&#8743;</span> : <span style={{marginLeft: "5px"}}>&#8744;</span>
+    return bool ? <span style={{marginLeft: "5px"}}>▾</span> : <span style={{marginLeft: "5px"}}>▸</span>
   }
 
   return (
-    <div className="container-center">
+    <div className="container-week">
       <h3>Semana 1</h3>
       <div className="systems">
         <button type="submit" onClick={goBack} className="primary-button" style={{marginBottom: "20px", width: "150px"}}>Regresar</button>
         <div className="systems-card-week week-card" onClick={() => showContent("day1")}>
-          <p style={{fontWeight: "bold", marginLeft: "5%"}}>Dia 1 {showArrow(showDay1)}</p>
+          <p style={{fontWeight: "bold", marginLeft: "5%"}}>Eliminación {showArrow(showDay1)}</p>
           {showDay1 ? 
             <div style={{marginLeft: "5%"}}>
               <p>asdsdasdasdasd</p>
@@ -68,7 +68,7 @@ const Week1 = () => {
           }
         </div>
         <div className="systems-card-week week-card" onClick={() => showContent("day2")}>
-          <p style={{fontWeight: "bold", marginLeft: "5%"}}>Dia 2 {showArrow(showDay2)}</p>
+          <p style={{fontWeight: "bold", marginLeft: "5%"}}>Menú {showArrow(showDay2)}</p>
           {showDay2 ? 
             <div style={{marginLeft: "5%"}}>
               <p>asdsdasdasdasd</p>
@@ -79,7 +79,7 @@ const Week1 = () => {
           }
         </div>
         <div className="systems-card-week week-card" onClick={() => showContent("day3")}>
-          <p style={{fontWeight: "bold", marginLeft: "5%"}}>Dia 3 {showArrow(showDay3)}</p>
+          <p style={{fontWeight: "bold", marginLeft: "5%"}}>Tips y Consejos{showArrow(showDay3)}</p>
           {showDay3 ? 
             <div style={{marginLeft: "5%"}}>
               <p>asdsdasdasdasd</p>
@@ -90,41 +90,8 @@ const Week1 = () => {
           }
         </div>
         <div className="systems-card-week week-card" onClick={() => showContent("day4")}>
-          <p style={{fontWeight: "bold", marginLeft: "5%"}}>Dia 4 {showArrow(showDay4)}</p>
+          <p style={{fontWeight: "bold", marginLeft: "5%"}}>Bonos {showArrow(showDay4)}</p>
           {showDay4 ? 
-            <div style={{marginLeft: "5%"}}>
-              <p>asdsdasdasdasd</p>
-              <p>asdasdsadasdsadsad</p>
-              <p>sdasdsadsad</p>
-            </div>
-            : ""
-          }
-        </div>
-        <div className="systems-card-week week-card" onClick={() => showContent("day5")}>
-          <p style={{fontWeight: "bold", marginLeft: "5%"}}>Dia 5 {showArrow(showDay5)}</p>
-          {showDay5 ? 
-            <div style={{marginLeft: "5%"}}>
-              <p>asdsdasdasdasd</p>
-              <p>asdasdsadasdsadsad</p>
-              <p>sdasdsadsad</p>
-            </div>
-            : ""
-          }
-        </div>
-        <div className="systems-card-week week-card" onClick={() => showContent("day6")}>
-          <p style={{fontWeight: "bold", marginLeft: "5%"}}>Dia 6 {showArrow(showDay6)}</p>
-          {showDay6 ? 
-            <div style={{marginLeft: "5%"}}>
-              <p>asdsdasdasdasd</p>
-              <p>asdasdsadasdsadsad</p>
-              <p>sdasdsadsad</p>
-            </div>
-            : ""
-          }
-        </div>
-        <div className="systems-card-week week-card" onClick={() => showContent("day7")}>
-          <p style={{fontWeight: "bold", marginLeft: "5%"}}>Dia 7 {showArrow(showDay7)}</p>
-          {showDay7 ? 
             <div style={{marginLeft: "5%"}}>
               <p>asdsdasdasdasd</p>
               <p>asdasdsadasdsadsad</p>

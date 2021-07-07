@@ -4,6 +4,7 @@ const RoutesLiterals = {
     programaPersonalizado: "/programa-personalizado",
     programaPersonalizadoGracias: "/programa-personalizado-gracias",
     login: "/login",
+    welcomeProgram: "/programa-bienvenido",
     quiz: "/quiz",
     quizResults: "/quiz-results",
     symptoms: "/symptoms",
@@ -24,7 +25,14 @@ const RoutesLiterals = {
     week5: "/programa-semana5",
     week6: "/programa-semana6",
     week7: "/programa-semana7",
-    week8: "/programa-semana8"
+    week8: "/programa-semana8",
+    retoBienvenida: "/reto-bienvenida",
+    retoPreparativos: "/reto-preparativos",
+    retoDia1: "/reto-dia1",
+    retoDia2: "/reto-dia2",
+    retoDia3: "/reto-dia3",
+    retoDia4: "/reto-dia4",
+    retoDia5: "/reto-dia5",
   };
   
   export default RoutesLiterals;

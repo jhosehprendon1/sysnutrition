@@ -40,7 +40,7 @@ const Symptoms = () => {
   const nextButton = () => {
     if (Object.values(state.symptoms).some(el => el)) {
       return (
-        <button type="submit" onClick={clickContinue} className="primary-button" style={{marginBottom: "20px", marginTop: "-10px", padding: "0 20px"}}>Continuar al Programa</button>
+        <button type="submit" onClick={clickContinue} className="primary-button" style={{marginBottom: "20px", marginTop: "-10px", padding: "10px 20px"}}>Continuar al Programa</button>
       )
     }
   }
