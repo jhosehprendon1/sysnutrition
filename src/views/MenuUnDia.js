@@ -51,7 +51,7 @@ export default function MenuUnDia() {
           <button type="submit" style={{marginTop: "20px"}} className="primary-button full">Obtener Menú</button>
         </form>
       </div>
-      <img style={{width: '290px'}} alt="guia-reto-desinflamatorio" src={require('../images/menu1dia.png').default} />
+      <img style={{width: '290px', boxShadow: '0 5px 50px grey'}} alt="guia-reto-desinflamatorio" src={require('../images/menu1dia.png').default} />
     </div>
   )
 }
