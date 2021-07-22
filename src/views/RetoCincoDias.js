@@ -33,11 +33,11 @@ export default function RetoCincoDias() {
               <li>Videos donde aprenderás las bases de una alimentación antiinflamatoria y prácticas que te ayudarán a obtener resultados</li>
             </ul>
           </div>
-          <p className="reto-content-layout-cta">Regístrate en el Reto Gratis</p>
         </div>
         <img style={{width: '250px'}} alt="guia-reto-desinflamatorio" src={require('../images/guia_cover.png').default} />
       </div>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        <p style={{fontWeight: "bold"}}>Regístrate en el Reto Gratis</p>
         <label htmlFor="name" className="full">
           <p>Nombre*</p>
           <input

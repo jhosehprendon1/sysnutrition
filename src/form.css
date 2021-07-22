@@ -1,8 +1,8 @@
 
 .form {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap:10px;
+  grid-gap:10px; */
   width: 60%;
   margin: auto;
 }
@@ -35,11 +35,11 @@
 }
 
 .form input {
-  padding: 0.8em;
-  border: 0.2em solid #AEB8C6;
+  padding: 15px;
+  border: 1.8px solid #AEB8C6;
   min-width: 400px;
   border-radius: 4px;
-  margin-top: -10px;
+  margin-top: -14px;
 }
 
 .form .full{
@@ -74,7 +74,7 @@
   border-radius: 20px;
   cursor: pointer;
   margin-top: 10px;
-  max-width: 400px;
+  width: 400px;
   outline: none;
   font-size: 16px;
   padding: 10px;
@@ -87,6 +87,7 @@
 
 .reto-content-layout {
   display: flex;
+  padding: 0 3%;
 }
 
 .programa-content-layout {
@@ -103,9 +104,8 @@
   height: 98%;
 }
 
-.reto-content {
-  width: 60%;
-  margin-left: 5%;
+.last-message {
+  width: 400px;
 }
 
 .reto-content-layout-cta {
@@ -359,6 +359,7 @@ ul li::before {
 }
 
 @media screen and (max-width:900px) {
+
   .reto-content-layout img {
     display: none;
   }
@@ -453,5 +454,18 @@ ul li::before {
     width: 100%;
     margin: auto;
     margin-top: 10px;
+  }
+
+  .primary-button {
+    width: 300px;
+  }
+
+  .last-message {
+    width: 300px;
+    text-align: center;
+  }
+
+  .error {
+    width: 250px;
   }
 }

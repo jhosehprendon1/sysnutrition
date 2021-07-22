@@ -5,6 +5,9 @@ import {
   Route
 } from "react-router-dom";
 
+import MenuUnDia from './views/MenuUnDia';
+import MenuUnDiaGracias from './views/MenuUnDiaGracias';
+import MenuUnDiaDescarga from './views/MenuUnDiaDescarga';
 import RetoCincoDias from './views/RetoCincoDias';
 import RetoCincoDiasGracias from './views/RetoCincoDiasGracias';
 import ProgramaPersonalizado from './views/ProgramaPersonalizado';
@@ -60,6 +63,9 @@ const App = () => {
     <Router>
       <Switch>
         <Route exact path={RoutesLiterals.login} component={() => <Login setUser={setUser}/>} />
+        <Route exact path={RoutesLiterals.menuUnDia} component={MenuUnDia} />
+        <Route exact path={RoutesLiterals.menuUnDiaGracias} component={MenuUnDiaGracias} />
+        <Route exact path={RoutesLiterals.menuUnDiaDescarga} component={MenuUnDiaDescarga} />
         <Route exact path={RoutesLiterals.retoCincoDias} component={RetoCincoDias} />
         <Route exact path={RoutesLiterals.retoCincoDiasGracias} component={RetoCincoDiasGracias} />
         <Route exact path={RoutesLiterals.programaPersonalizado}component={ProgramaPersonalizado} />
@@ -93,7 +99,7 @@ const App = () => {
         <Route exact path={RoutesLiterals.retoDia3} component={RetoDia3} />
         <Route exact path={RoutesLiterals.retoDia4} component={RetoDia4} />
         <Route exact path={RoutesLiterals.retoDia5} component={RetoDia5} />
-        <Route path='*' exact={true} component={RetoCincoDias} />
+        <Route path='*' exact={true} component={MenuUnDia} />
       </Switch>
     </Router>
   );

@@ -1,4 +1,7 @@
 const RoutesLiterals = {
+    menuUnDia: "/menu-un-dia",
+    menuUnDiaGracias: "/menu-un-dia/gracias",
+    menuUnDiaDescarga: "/menu-un-dia/descarga",
     retoCincoDias: "/reto-cinco-dias",
     retoCincoDiasGracias: "/reto-cinco-dias-gracias",
     programaPersonalizado: "/programa-personalizado",
