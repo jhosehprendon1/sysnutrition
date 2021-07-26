@@ -63,6 +63,13 @@ const App = () => {
 
   return (
     <Router history={history}>
+      <Route path="/" render={({location}) => {
+        if (typeof window.ga === 'function') {
+          window.ga('set', 'page', location.pathname + location.search);
+          window.ga('send', 'pageview');
+        }
+        return null;
+      }} />
       <Switch>
         <Route exact path={RoutesLiterals.login} component={() => <Login setUser={setUser}/>} />
         <Route exact path={RoutesLiterals.menuUnDia} component={MenuUnDia} />
