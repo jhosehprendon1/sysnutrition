@@ -1,21 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from "react-hook-form";
+import { connect } from 'react-redux';
+import { createContact } from '../store/actions';
 import { useHistory } from "react-router-dom";
 import RoutesLiterals from "../RoutesLiterals"
 
 import '../form.css';
 
 
-export default function MenuUnDia() {
+const MenuUnDia = function ({createContact, error}) {
   const { register, handleSubmit, errors } = useForm();
+  const [loading, setLoading] = useState(false);
   const history = useHistory();
 
+  const renderSpinner = () => {
+    if(loading) {
+      return (
+        <div style ={{marginLeft: '10px'}} className="ui active inline loader"></div>
+      )
+    } else {
+      return null
+    }
+  }
+
   const onSubmit = (data) => {
-    history.push(RoutesLiterals.menuUnDiaGracias);
-    console.log(data)
+    setLoading(true)
+    createContact(data, 27, 28, history).then(() => {
+      setLoading(false)
+    }).catch(e => {
+      setLoading(false)
+    })
   }
 
   return (
+    <>
+    <img style={{width: "120px", margin: "0px 0 35px 2.5%"}} alt="logo" src={require('../images/logo2.png').default} />
     <div className="reto-content-layout">
       <div className="reto-content">
         <h1>Si Tienes Problemas Digestivos, Descontrol de Peso, Fatiga, Alergias o Migrañas puede que tu Cuerpo esté en Proceso de Inflamación</h1>
@@ -48,10 +67,21 @@ export default function MenuUnDia() {
             />
             <p className={errors.email ? "error error-visible" : "error error-hidden"}>Por favor ingresa un email valido</p>
           </label>
+          <p className={error ? "error error-visible" : "error error-hidden"}>{error}</p>
           <button type="submit" style={{marginTop: "20px"}} className="primary-button full">Obtener Menú</button>
+          {renderSpinner()}
         </form>
       </div>
-      <img style={{width: '290px', boxShadow: '0 5px 50px grey'}} alt="guia-reto-desinflamatorio" src={require('../images/menu1dia.png').default} />
+      <img style={{width: '380px', boxShadow: '0 5px 50px grey'}} alt="menu-antiinflamatorio-1-dia" src={require('../images/guide-cover-1.png').default} />
     </div>
+    </>
   )
 }
+
+const mapStateToProps = (state) => {
+  return {
+    error: state.contact.error
+  }
+}
+
+export default connect(mapStateToProps, {createContact})(MenuUnDia)

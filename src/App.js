@@ -4,6 +4,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import MenuUnDia from './views/MenuUnDia';
 import MenuUnDiaGracias from './views/MenuUnDiaGracias';
@@ -49,6 +50,7 @@ import './App.css';
 const App = () => {
   const [systemsScore, setSystemsScore] = useState({})
   const [loggedUser, setLoggedUser] = useState(null)
+  const history = useHistory();
 
   const sendScore = (score) => {
     setSystemsScore(score)
@@ -60,7 +62,7 @@ const App = () => {
   }
 
   return (
-    <Router>
+    <Router history={history}>
       <Switch>
         <Route exact path={RoutesLiterals.login} component={() => <Login setUser={setUser}/>} />
         <Route exact path={RoutesLiterals.menuUnDia} component={MenuUnDia} />
