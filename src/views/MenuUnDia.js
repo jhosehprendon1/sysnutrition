@@ -67,6 +67,7 @@ const MenuUnDia = function ({createContact, error}) {
             />
             <p className={errors.email ? "error error-visible" : "error error-hidden"}>Por favor ingresa un email valido</p>
           </label>
+          <p style={{marginBottom: "1px"}} className={error ? "error error-visible" : "error error-hidden"}>El Email ya ha sido registrado o...</p>
           <p className={error ? "error error-visible" : "error error-hidden"}>{error}</p>
           <button type="submit" style={{marginTop: "20px"}} className="primary-button full">Obtener Menú</button>
           {renderSpinner()}
