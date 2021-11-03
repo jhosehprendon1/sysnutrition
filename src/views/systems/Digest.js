@@ -15,19 +15,12 @@ const Digest = () => {
       <div className="systems">
         <button type="submit" onClick={goBack} className="primary-button" style={{marginBottom: "20px", width: "150px"}}>Regresar</button>
         <div className="systems-card">
-          <p style={{textAlign: 'center', fontWeight: "bold"}}>Síntomas</p>
-          <p>Signs of brain inflammation include brain fog, problems with concentration and focus, mood problems like anxiety and/or depression, and memory issues. Long-term brain inflammation may be a risk factor for cognitive impairment and eventually dementia, as well as for autoimmune disease or other neurological conditions like Parkinson’s, especially in genetically susceptible people.</p>
-        </div>
-        <div className="systems-card">
-          <p style={{textAlign: 'center', fontWeight: "bold"}}>Suplementos/Super Alimentos</p>
-          <p>1 - Wild-caught fish, because of its high concentration of brain-boosting docosahexaenoic acid (DHA), an omega-3 fatty acid.</p>
-          <p>2 - MCT oil: its bioavailable fats, extracted from coconut and palm oil, have been shown to improve cognitive function.</p>
-          <p>3 - Lion’s mane mushroom, which contains nerve growth factors (NGFs) to help regenerate and protect brain tissue.</p>
-          <p>4 - Mucuna pruriens, an Ayurvedic herb that supports the central and peripheral nervous systems, helping the body to adapt to stress. It is rich in L-dopa, the precursor to the neurotransmitter dopamine.</p>
-          <p>5 - Krill oil is even better than fish oil, containing 50 times more of the powerful antioxidant astaxanthin than most fish oil brands. Krill oil also contains the beneficial phospholipids called phosphatidylcholine and phosphatidylserine, which the body uses to support brain and nerve function.</p>
-          <p>6 - Magnesium supports the brain receptors for learning and memory function, increasing neuroplasticity and mental clarity. Deficiencies have been linked to brain problems such as anxiety, depression, ADHD, migraines, and brain fog. Magnesium glycinate and magnesium threonate are two of the most absorbable forms that are conducive to calming anxiety and improving cognitive function (respectively).</p>
-          <p>7 - Aerobic exercise enhances the production of BDNF (brain-derived neurotrophic factor), boosting memory and overall cognitive function. Try to get at least 30 minutes six days per week.</p>
-          <p>8 - Valerian root, which contains valerenic acid, a substance that modulates the neurotransmitter GABA. Brain-derived neurotrophic factor (BDNF) is a protein that helps the growth and function of neurons. Healthy GABA levels are necessary for increasing BDNF, which is important because low BDNF levels are associated with impaired memory and Alzheimer’s.</p>
+          <p>La inflamación en este sistema es de los más comunes y el que mayor afecta a otros sistemas. Cuidar de tu salud digestiva, te ayudará a recuperar más rápido tu salud en general.
+Cuando estés en plena crisis digestiva: prefiere <span style={{fontWeight: "bold"}}>caldos de huesos, aloe vera, glutamina y vegetales cocidos.</span> Ayudarán a la regeneración del tejido intestinal.</p>
+          <p>Para favorecer tus digestiones: prueba ingiriendo algo ácido minutos antes de comer como <span style={{fontWeight: "bold"}}>agua con limón o con 1 cta de vinagre de manzana</span> (no lo hagas si sufres gastritis o reflujo gastroesofágico), <span style={{fontWeight: "bold"}}>agua con gas o betaína HCL</span> en suplemento. Enzimas digestivas en forma de suplemento o su consumo natural a través de la papaya.</p>
+          <p>Para favorecer la función enzimática, evita la ingesta de líquido durante las comidas, pero no dejes de hidratarte fuera de las comidas.</p>
+          <p>Cuidar tu microbiota es cuidar de ti: incorporar <span style={{fontWeight: "bold"}}>fermentados y probióticos</span> en tu alimentación es una forma de mantenerla saludable. Sin embargo, esto se debe hacer según tolerancia.</p>
+          <p>Te sugiero primero hacer el programa de alimentación antiinflamatoria y una vez sientas mejoras podrás probar tolerancia. Su ingesta debe ser de a poquito (1cdta) e ir evaluando cómo te sientes. De hecho, si tienes desequilibrio en tu microbiota puede agravar síntomas, por eso ve de a poco. </p>
         </div>
       </div>
     </div>

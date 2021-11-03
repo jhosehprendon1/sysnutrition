@@ -16,8 +16,9 @@ const RetoPreparativos = () => {
       <div className="reto-button-control">
         <Link to="/files/guia-reto-antiinflamatorio.pdf" target="_blank" download>
           <button type="submit" style={{padding: "10px 20px", marginRight: "10px"}} className="primary-button full">Descargar Plan del Reto</button>
-        </Link>        <button type="submit" style={{padding: "10px 20px", marginRight: "10px"}} className="primary-button full">Acceso al grupo de Whatsapp</button>
-        <button type="submit" style={{padding: "10px 20px"}} className="primary-button full">Acceso al grupo de Facebook</button>
+        </Link>        
+        <a href="https://chat.whatsapp.com/IHx8nIEZslRIrRvDt0Hvct"><button type="submit" style={{padding: "10px 20px", marginRight: "10px"}} className="primary-button full">Acceso al grupo de Whatsapp</button></a>        
+        <a href="https://www.facebook.com/groups/615110279521790"><button type="submit" style={{padding: "10px 20px"}} className="primary-button full">Ir Grupo de Facebook</button></a>
       </div>
     </div>
   )

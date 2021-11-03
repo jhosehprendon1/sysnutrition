@@ -12,16 +12,18 @@ const Profile = ({systemsScore, user}) => {
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"))
-    db.collection("users").doc(user.uid).get().then((res) => {
-      if(res.data()) {
-        if (!res.data().quizCompleted) {
+    if(user) {
+      db.collection("users").doc(user.uid).get().then((res) => {
+        if(res.data()) {
+          if (!res.data().quizCompleted) {
+            history.replace(RoutesLiterals.welcomeProgram);
+          }
+          setSystemObject(res.data())
+        } else {
           history.replace(RoutesLiterals.welcomeProgram);
         }
-        setSystemObject(res.data())
-      } else {
-        history.replace(RoutesLiterals.welcomeProgram);
-      }
-    })
+      })
+    }
   }, [])
 
   if (systemsScore.brain || systemObject) {
@@ -82,7 +84,7 @@ const Profile = ({systemsScore, user}) => {
               <p>Semana</p>
               <p style={{fontWeight: "bold"}}>4</p>
             </div>
-            <div onClick={() => goToWeek("week5")} className="profile-program-card">
+            {/* <div onClick={() => goToWeek("week5")} className="profile-program-card">
               <p>Semana</p>
               <p style={{fontWeight: "bold"}}>5</p>
             </div>
@@ -97,7 +99,7 @@ const Profile = ({systemsScore, user}) => {
             <div onClick={() => goToWeek("week8")} className="profile-program-card">
               <p>Semana</p>
               <p style={{fontWeight: "bold"}}>8</p>
-            </div>
+            </div> */}
           </div>
         )
 
@@ -135,7 +137,7 @@ const Profile = ({systemsScore, user}) => {
           </div>
           <div className="card-total-profile">
             <p>Programa</p>
-            <p style={{fontWeight: "bold"}}>{(totalScore > 15 || scoreArray.filter(el => el >= 8).length > 1) ? "8 Semanas" : "4 Semanas"}</p>
+            <p style={{fontWeight: "bold"}}>{(totalScore > 15 || scoreArray.filter(el => el >= 8).length > 1) ? "4 Semanas" : "4 Semanas"}</p>
           </div>
         </div>
         {/* <div className="profile-nav-buttons">

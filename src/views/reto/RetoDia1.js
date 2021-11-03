@@ -32,11 +32,10 @@ const RetoDia1 = () => {
         }
       </div>
       <div style={{textAlign: 'center', color: '#283d54'}}>
-        <h3>Comenta en el video de Youtube tu progreso en el reto o cualquier duda que tengas</h3>
+        <h3>Comenta en el grupo de Facebook tu progreso en el reto o cualquier duda que tengas</h3>
       </div>
       <div style={{textAlign: "center"}}>
-        <a href="https://www.youtube.com/watch?v=NWeypwYt1SI" target="_blank"><button style={{padding: "10px 20px", marginRight: "10px"}} className="primary-button full">Comentar en el video de Youtube</button></a>
-        {/* <button style={{padding: "10px 20px"}} className="primary-button">Ir al Grupo de Facebook</button> */}
+        <a href="https://www.facebook.com/groups/615110279521790"><button type="submit" style={{padding: "10px 20px"}} className="primary-button full">Ir al grupo de Facebook</button></a>
       </div>
     </div>
   )

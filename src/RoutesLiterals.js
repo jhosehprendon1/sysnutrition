@@ -8,6 +8,9 @@ const RoutesLiterals = {
     programaPersonalizadoGracias: "/programa-personalizado-gracias",
     login: "/login",
     welcomeProgram: "/programa-bienvenido",
+    quizInflamatorio: "/quiz-inflamatorio",
+    quizInflamatorioResults: "/quiz-inflamatorio/results",
+    retoPayment: "/reto-payment",
     quiz: "/quiz",
     quizResults: "/quiz-results",
     symptoms: "/symptoms",
@@ -29,6 +32,7 @@ const RoutesLiterals = {
     week6: "/programa-semana6",
     week7: "/programa-semana7",
     week8: "/programa-semana8",
+    retoAntiinflamatorio: "/reto-antiinflamatorio",
     retoBienvenida: "/reto-bienvenida",
     retoPreparativos: "/reto-preparativos",
     retoDia1: "/reto-dia1",
@@ -36,6 +40,8 @@ const RoutesLiterals = {
     retoDia3: "/reto-dia3",
     retoDia4: "/reto-dia4",
     retoDia5: "/reto-dia5",
+    programAdvanced: "/programa-avanzado",
+    programConfirmaton: "/programa-avanzado-confirmacion"
   };
   
   export default RoutesLiterals;

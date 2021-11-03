@@ -40,11 +40,11 @@ const RetoDia4 = () => {
         }
       </div>
       <div style={{textAlign: 'center', color: '#283d54'}}>
-        <h3>Comenta en el video de Youtube tu progreso en el reto o cualquier duda que tengas</h3>
+        <h3>Comenta en el grupo de Facebook tu progreso en el reto o cualquier duda que tengas</h3>
       </div>
       <div style={{display: "flex"}}>
         <button type="submit" onClick={goToDay3} style={{padding: "10px 20px", marginRight: "10px"}} className="primary-button full">Ir al Dia 3</button>
-        <button type="submit" style={{padding: "10px 20px"}} className="primary-button full">Comentar en el video de Youtube</button>
+        <a href="https://www.facebook.com/groups/615110279521790"><button type="submit" style={{padding: "10px 20px"}} className="primary-button full">Comentar en el Grupo de Facebook</button></a>
       </div>
   </div>
   )

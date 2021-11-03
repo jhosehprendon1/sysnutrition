@@ -3,9 +3,9 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import RoutesLiterals from "../RoutesLiterals";
 
-const QuizResults = ({systemsScore}) => {
-
+const QuizInflamatorioResults = ({systemsScore}) => {
   const history = useHistory();
+
 
   if (systemsScore.brain) {
     const brainScore = Object.values(systemsScore.brain).reduce((a, b) => a + b, 0)
@@ -20,14 +20,14 @@ const QuizResults = ({systemsScore}) => {
 
     const programToFollow = () => {
       if (totalScore > 15 || scoreArray.filter(el => el >= 8).length > 1) {
-        return " - Te encuentras en un grupo de inflamación alto y debes seguir el programa de Eliminación de 4 semanas."
+        return " - Te encuentras en un grupo de inflamación alto y debes seguir una Dieta de Eliminación y Anti-inflamatoria."
       } else {
-        return " - Te encuentras en un grupo de inflamación leve, puedes seguir el programa de Eliminación de 4 semanas."
+        return " - Te encuentras en un grupo de inflamación leve, puedes seguir una Dieta de Eliminación y Anti-inflamatoria."
       }
     }
 
     const showPoly = () => {
-      return scoreArray.filter(el => el >= 8).length > 1 ? " - Tuviste dos o más sistemas en rojo. Tienes el perfil de Poli-inflamación. Debemos trabajar en más de un sistema." : null
+      return scoreArray.filter(el => el >= 8).length > 1 ? " - Tuviste dos o más sistemas en rojo. Tienes el perfil de Poly-inflamación. Debemos trabajar en más de un sistema." : null
     }
 
     const checkSeverity = (systemScore) => {
@@ -48,29 +48,43 @@ const QuizResults = ({systemsScore}) => {
       }
     }
 
-    const sendToSymptoms = () => {
-      history.push(RoutesLiterals.symptoms);
+    const sendToRetoPayment = () => {
+      window.location.href = "https://mesana.co/reto-payment"
     }
   
     return (
       <div className="container-center">
         <h3>Tus Resultados Finales</h3>
         <div className="quiz-content-card-total">
-          <p>Puntaje General</p>
+          <p style={{fontWeight: "bold"}}>Puntaje General</p>
           <p className={totalScore > 15 ? "score-severe": "score-normal"} style={{fontSize: "30px", marginTop: "-10px"}}>{totalScore} {totalScore >= 15 ? "🔥" : "😊"}</p>
         </div>
         <div className="quiz-content-card-total">
-          <p>Diagnostico y Explicación</p>
+          <p style={{fontWeight: "bold"}}>Diagnostico y Explicación</p>
           <div style={{textAlign: "left"}}>
-            <p> - Los sistemas con puntajes igual o mayor a 8 (en rojo) necesitan atención inmediata. El programa de eliminación te ayudará.</p>
-            <p>{showPoly()}</p>
             <p>{programToFollow()}</p>
+            <p> - Los sistemas (abajo) con puntajes igual o mayor a 8 (en rojo) necesitan atención inmediata. Una dieta anti-inflamatoria te ayudará.</p>
+            <p>{showPoly()}</p>
           </div>
-          <button type="submit" onClick={sendToSymptoms} className="primary-button" style={{padding: "10px 25px", marginBottom: "18px"}}>Continuar con el Programa</button>
+        </div>
+        <div className="quiz-content-card-total">
+        <p style={{marginTop: "20px", fontWeight: "bold"}}>Sigue el Reto de Alimentación Anti-inflamatoria de 5 dias y comenzarás a ver cambios positivos en tu cuerpo.</p>
+          <p>Recibirás una Guia en PDF y videos que contienen:</p>
+          <ul style={{textAlign: "left", fontSize: "16px", lineHeight: "25px"}}>
+            <li>Menú de 5 dias con desayuno, almuerzo y cena</li>
+            <li>Recetas e instrucciones de preparación</li>
+            <li>Lista de alimentos inflamatorios que debes evitar</li>
+            <li>Lista de alimentos antiinflamatorios que puedes incluir</li>
+            <li>Acceso a grupo privado de Facebook donde podrás aclarar tus dudas</li>
+            <li>Videos donde aprenderás las bases de una alimentación antiinflamatoria y prácticas que te ayudarán a obtener resultados</li>
+          </ul>
+          <p><strong><span style={{textDecoration: 'line-through', color: 'red', fontSize: "25px"}}>$80</span></strong></p>
+          <p style={{marginTop: '-20px', color: '#00b300', fontSize: '40px'}}><strong>$15</strong></p>
+          <button type="submit" onClick={sendToRetoPayment} className="primary-button" style={{padding: "10px 25px", margin: "-25px 0 18px 0"}}>Realizar Pago del Reto</button>
         </div>
         <div className="quiz-content-card-total leyend-card">
-        <p>Leyenda:</p>
-        <p style={{fontSize: "15px", marginTop: "-14px"}}>Verifica los colores en cada resultado de tus sistemas</p>
+          <p style={{fontWeight: "bold"}}>Leyenda:</p>
+          <p style={{fontSize: "15px", marginTop: "-14px"}}>Verifica los colores en cada resultado de tus sistemas</p>
         <div className="leyend-results">
           <div className="leyend-normal"></div>
           <p>Perfil Normal (Sin inflamación)</p>
@@ -121,8 +135,16 @@ const QuizResults = ({systemsScore}) => {
       </div>
     )
   } else {
-    return null
+    const sendToQuiz = () => {
+      history.push(RoutesLiterals.quizInflamatorio);
+
+    }
+    return (
+      <div className="container-center">
+        <button type="submit" onClick={sendToQuiz} className="primary-button" style={{marginTop: "50px", padding: "10px 25px"}}>Volver a completar el Quiz</button>
+      </div>
+    )
   }
 };
 
-export default QuizResults;
+export default QuizInflamatorioResults;

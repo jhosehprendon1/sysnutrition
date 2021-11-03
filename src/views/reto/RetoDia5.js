@@ -22,7 +22,7 @@ const RetoDia5 = () => {
       <div style={{textAlign: 'center', color: '#283d54'}}>
         <h2 style={{fontSize: '30px'}}>Dia 5 - Reto Antiinflamatorio</h2>
       </div>
-      <iframe className="reto-video" src="https://www.youtube.com/embed/X-5eRX89wac?rel=0" title="Reto Antiinflamatorio Bienvenida" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe className="reto-video" src="https://www.youtube.com/embed/DglP57yG9Sg?&rel=0" title="Reto Antiinflamatorio Bienvenida" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <div className="systems-card-week week-card menu-card" onClick={() => showContent()}>
         <p style={{fontWeight: "bold", marginLeft: "5%"}}>Menú de Hoy {showArrow(showMenu)}</p>
         {showMenu ? 
@@ -36,12 +36,12 @@ const RetoDia5 = () => {
           : ""
         }
       </div>
-      <div style={{textAlign: 'center', color: '#283d54'}}>
-        <h3>Comenta en el video de Youtube tu progreso en el reto o cualquier duda que tengas</h3>
-      </div>
-      <div style={{display: "flex"}}>
-        <button type="submit" onClick={goToDay4} style={{padding: "10px 20px", marginRight: "10px"}} className="primary-button full">Ir al Dia 4</button>
-        <button type="submit" style={{padding: "10px 20px"}} className="primary-button full">Comentar en el video de Youtube</button>
+      <h2 style={{marginTop: '-5px'}}>Programa Antiinflamatorio Avanzado</h2>
+      <p style={{marginBottom: '10px', color: '#00b300', fontSize: '40px'}}><strong>$120</strong></p>
+      <div id="paypal-programa-avanzado" style={{textAlign: 'center', marginTop: '5px'}}></div>
+      <div style={{fontSize: '14px', textAlign: 'center'}}>
+        <p>Si tienes problemas para completar el pago escríbeme a:</p>
+        <p style={{marginTop: '-15px'}}>carolita320@gmail.com</p>
       </div>
     </div>
   )

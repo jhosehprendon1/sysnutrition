@@ -71,9 +71,15 @@ const Toolbox = ({systemsScore}) => {
     return (
       <div className="container-center">
         <h3>Tu Perfil Inflamatorio</h3>
-        <p style={{width: "80%", textAlign: "center", marginTop: "-10px"}}>Tu perfil inflamatorio esta determinado por los sistemas con puntaje en rojo. <br></br>Haz click en cada sistema para acceder a los suplmentos y super alimentos que te van a ayudar a mejorar.</p>
         <button type="submit" onClick={goBack} className="primary-button" style={{marginBottom: "20px", width: "150px"}}>Regresar</button>
-        <div className="quiz-results">
+        <div style={{width: "80%", margin: "auto", marginTop: "-10px"}} className="systems-card">
+          <p>Tu perfil inflamatorio esta determinado por los sistemas con puntaje en rojo. <br></br>Haz click en cada sistema para acceder a los suplmentos y super alimentos que te van a ayudar a mejorar.</p>
+          <p>En esta sección encontrarás ayudas antiinflamatorias que acelerarán tu proceso de recuperación, siempre y cuando sean usados de forma complementaria al estilo de vida antiinflamatorio que aprenderás en este programa.</p>
+          <p>Son alimentos, prácticas y suplementos que potencian la recuperación y el buen funcionamiento de tus sistemas. </p>
+          <p>Te sugiero que pruebes de una herramienta a la vez para que sientas que efecto tiene en ti y dando prioridad al sistema donde sientas que tienes mayor problema. </p>
+          <p>Y en caso de dudas si tienes alguna condición específica consulta con tu médico de cabecera.</p>
+        </div>
+        <div className="quiz-results" style={{marginTop: "20px"}}>
           <div onClick={() => goToToolbox("brain")} className="profile-program-card" style={{width: "165px"}}>
             <p>Sistema <br></br>Cerebral</p>
             <p className={checkSeverity(brainScore)}>{brainScore}</p>

@@ -129,6 +129,13 @@
   text-align: left;
 }
 
+.leyend-results {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
 .leyend-card :first-child {
   margin-top: 0px;
 

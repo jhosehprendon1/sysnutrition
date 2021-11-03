@@ -37,7 +37,7 @@ export default function RetoCincoDias() {
         <img style={{width: '250px'}} alt="guia-reto-desinflamatorio" src={require('../images/guia_cover.png').default} />
       </div>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
-        <p style={{fontWeight: "bold"}}>Regístrate en el Reto Gratis</p>
+        <p style={{fontWeight: "bold", marginTop: "10px"}}>Regístrate en el Reto Gratis</p>
         <label htmlFor="name" className="full">
           <p>Nombre*</p>
           <input
