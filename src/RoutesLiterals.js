@@ -11,6 +11,8 @@ const RoutesLiterals = {
     quizInflamatorio: "/quiz-inflamatorio",
     quizInflamatorioResults: "/quiz-inflamatorio/results",
     retoPayment: "/reto-payment",
+    planPayment: "/plan-payment",
+    planAntiinflamatorio: "/plan-antiinflamatorio",
     quiz: "/quiz",
     quizResults: "/quiz-results",
     symptoms: "/symptoms",

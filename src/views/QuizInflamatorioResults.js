@@ -20,9 +20,9 @@ const QuizInflamatorioResults = ({systemsScore}) => {
 
     const programToFollow = () => {
       if (totalScore > 15 || scoreArray.filter(el => el >= 8).length > 1) {
-        return " - Te encuentras en un grupo de inflamación alto y debes seguir una Dieta de Eliminación y Anti-inflamatoria."
+        return " - Te encuentras en un grupo de inflamación alto y debes seguir una Dieta de Eliminación y Anti-inflamatoria para reducir los síntomas."
       } else {
-        return " - Te encuentras en un grupo de inflamación leve, puedes seguir una Dieta de Eliminación y Anti-inflamatoria."
+        return " - Te encuentras en un grupo de inflamación leve, puedes seguir una Dieta de Eliminación y Anti-inflamatoria para reducir los síntomas."
       }
     }
 
@@ -47,10 +47,6 @@ const QuizInflamatorioResults = ({systemsScore}) => {
         return "score-severe"
       }
     }
-
-    const sendToRetoPayment = () => {
-      window.location.href = "https://mesana.co/reto-payment"
-    }
   
     return (
       <div className="container-center">
@@ -67,41 +63,7 @@ const QuizInflamatorioResults = ({systemsScore}) => {
             <p>{showPoly()}</p>
           </div>
         </div>
-        <div className="quiz-content-card-total">
-        <p style={{marginTop: "20px", fontWeight: "bold"}}>Sigue el Reto de Alimentación Anti-inflamatoria de 5 dias y comenzarás a ver cambios positivos en tu cuerpo.</p>
-          <p>Recibirás una Guia en PDF y videos que contienen:</p>
-          <ul style={{textAlign: "left", fontSize: "16px", lineHeight: "25px"}}>
-            <li>Menú de 5 dias con desayuno, almuerzo y cena</li>
-            <li>Recetas e instrucciones de preparación</li>
-            <li>Lista de alimentos inflamatorios que debes evitar</li>
-            <li>Lista de alimentos antiinflamatorios que puedes incluir</li>
-            <li>Acceso a grupo privado de Facebook donde podrás aclarar tus dudas</li>
-            <li>Videos donde aprenderás las bases de una alimentación antiinflamatoria y prácticas que te ayudarán a obtener resultados</li>
-          </ul>
-          <p><strong><span style={{textDecoration: 'line-through', color: 'red', fontSize: "25px"}}>$80</span></strong></p>
-          <p style={{marginTop: '-20px', color: '#00b300', fontSize: '40px'}}><strong>$15</strong></p>
-          <button type="submit" onClick={sendToRetoPayment} className="primary-button" style={{padding: "10px 25px", margin: "-25px 0 18px 0"}}>Realizar Pago del Reto</button>
-        </div>
-        <div className="quiz-content-card-total leyend-card">
-          <p style={{fontWeight: "bold"}}>Leyenda:</p>
-          <p style={{fontSize: "15px", marginTop: "-14px"}}>Verifica los colores en cada resultado de tus sistemas</p>
-        <div className="leyend-results">
-          <div className="leyend-normal"></div>
-          <p>Perfil Normal (Sin inflamación)</p>
-        </div>
-        <div className="leyend-results">
-          <div className="leyend-some"></div>
-          <p>Tienes algo de inflamación</p>
-        </div>
-        <div className="leyend-results">
-          <div className="leyend-warn"></div>
-          <p>Inflamación en progreso  (Prestar atención)</p>
-        </div>
-        <div className="leyend-results">
-          <div className="leyend-severe"></div>
-          <p>Inflamación significativa (Acción inmediata)</p>
-        </div>
-        </div>
+        
         <div className="quiz-results">
           <div className="quiz-results-summary">
             <p>Sistema <br></br>Cerebral</p>
@@ -131,6 +93,39 @@ const QuizInflamatorioResults = ({systemsScore}) => {
             <p>Sistema <br></br>Autoinmune</p>
             <p className={checkSeverity(immuneScore)}>{immuneScore}</p>
           </div>
+        </div>
+        <div className="quiz-content-card-total leyend-card">
+          <p style={{fontWeight: "bold"}}>Leyenda:</p>
+          <p style={{fontSize: "15px", marginTop: "-14px"}}>Verifica los colores en cada resultado de tus sistemas</p>
+        <div className="leyend-results">
+          <div className="leyend-normal"></div>
+          <p>Perfil Normal (Sin inflamación)</p>
+        </div>
+        <div className="leyend-results">
+          <div className="leyend-some"></div>
+          <p>Tienes algo de inflamación</p>
+        </div>
+        <div className="leyend-results">
+          <div className="leyend-warn"></div>
+          <p>Inflamación en progreso  (Prestar atención)</p>
+        </div>
+        <div className="leyend-results">
+          <div className="leyend-severe"></div>
+          <p>Inflamación significativa (Acción inmediata)</p>
+        </div>
+        </div>
+        <div className="quiz-content-card-total">
+        <p style={{marginTop: "20px", fontWeight: "bold"}}>Comienza a Ver Cambios Positivos en tu Cuerpo. <br></br>Reduce lo Síntomas y Vive Mejor.</p>
+        <p style={{fontWeight: "bold"}}>Lo puedes lograr con en el Plan de Alimentación Antiinflamatoria de 5 dias</p>
+          <p>En el Plan recibirás una Guia en PDF y videos que contienen:</p>
+          <ul style={{textAlign: "left", fontSize: "16px", lineHeight: "25px"}}>
+            <li>Menú de 5 dias con desayuno, almuerzo y cena</li>
+            <li>Recetas e instrucciones de preparación</li>
+            <li>Acceso a grupo privado de Facebook donde podrás aclarar tus dudas</li>
+            <li>Videos donde aprenderás las bases de una alimentación antiinflamatoria y prácticas que te ayudarán a obtener resultados</li>
+          </ul>
+          <p style={{marginTop: '20px', color: '#00b300', fontSize: '40px'}}><strong>$10</strong></p>
+          <a href="https://www.mesana.co/plan-payment"><button type="submit" className="primary-button" style={{padding: "10px 25px", margin: "-25px 0 18px 0"}}>Realizar Pago del Plan</button></a>
         </div>
       </div>
     )

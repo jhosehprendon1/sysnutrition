@@ -136,6 +136,10 @@
   text-align: left;
 }
 
+.leyend-results p {
+  font-size: 15px;
+}
+
 .leyend-card :first-child {
   margin-top: 0px;
 

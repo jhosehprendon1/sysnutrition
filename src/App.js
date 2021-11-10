@@ -52,6 +52,8 @@ import ProgramAdvanced from './views/program/ProgramAdvanced';
 import RoutesLiterals from "./RoutesLiterals";
 import PrivateRoute from "./PrivateRoute";
 import './App.css';
+import PlanPayment from "./views/PlanPayment";
+import PlanAntiinflamatorio from "./views/PlanAntiinflamatorio";
 
 const App = () => {
   const [systemsScore, setSystemsScore] = useState({})
@@ -88,6 +90,8 @@ const App = () => {
         <Route exact path={RoutesLiterals.quizInflamatorio} component={() => <QuizInflamatorio sendScore={sendScore} />} />
         <Route exact path={RoutesLiterals.quizInflamatorioResults} component={() => <QuizInflamatorioResults systemsScore={systemsScore} />} />
         <Route exact path={RoutesLiterals.retoPayment} component={() => <RetoPayment/>} />
+        <Route exact path={RoutesLiterals.planPayment} component={() => <PlanPayment/>} />
+        <Route exact path={RoutesLiterals.planAntiinflamatorio} component={() => <PlanAntiinflamatorio/>} />
         <PrivateRoute exact path={RoutesLiterals.welcomeProgram} component={WelcomeProgram} />
         <PrivateRoute exact path={RoutesLiterals.quiz} component={() => <Quiz sendScore={sendScore} />} />
         <PrivateRoute exact path={RoutesLiterals.quizResults} component={() => <QuizResults systemsScore={systemsScore} />} />

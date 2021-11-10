@@ -5,8 +5,7 @@ const RetoPayment = () => {
 
   return (
     <div className="container-center">
-      <h2 style={{fontWeight: "bold"}}>Reto de Alimentación Anti-inflamatoria</h2>
-      <p><strong><span style={{textDecoration: 'line-through', color: 'red', fontSize: "25px"}}>$80</span></strong></p>
+      <h2 style={{fontWeight: "bold"}}>Programa de Alimentación Anti-inflamatoria de 5 Dias</h2>
       <p style={{marginTop: '-20px', color: '#00b300', fontSize: '40px'}}><strong>$15</strong></p>
       <div id="paypal-button-reto" style={{textAlign: 'center', marginTop: '5px'}}></div>
       <div style={{fontSize: '14px', textAlign: 'center'}}>
