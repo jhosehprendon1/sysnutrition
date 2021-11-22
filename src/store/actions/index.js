@@ -72,7 +72,7 @@ export const createContact = (formValues, tagId, sequenceId, history) => {
           })
         }
 
-        history.push('/menu-un-dia/gracias')
+        history.push('/plan/gracias')
 
       } catch {
         dispatch({ type: REQUEST_ERROR, payload: 'Ourrió un error, intenta de nuevo' })

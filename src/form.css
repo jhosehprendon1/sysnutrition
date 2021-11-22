@@ -7,6 +7,11 @@
   margin: auto;
 }
 
+.form-plan {
+  width: 100%;
+  margin: auto;
+}
+
 .form a {
   text-decoration: underline;
   color: #277680;
@@ -38,6 +43,14 @@
   padding: 15px;
   border: 1.8px solid #AEB8C6;
   min-width: 400px;
+  border-radius: 4px;
+  margin-top: -14px;
+}
+
+.form-plan input {
+  padding: 15px;
+  border: 1.8px solid #AEB8C6;
+  width: 100%;
   border-radius: 4px;
   margin-top: -14px;
 }

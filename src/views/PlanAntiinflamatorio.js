@@ -60,8 +60,8 @@ const PlanAntiinflamatorio = () => {
 
   return (
     <div className="container-week">
-      <h3>Plan de Alimentación Antiinflamatoria de 5 Dias</h3>
-      <div className="systems">
+      <h3>Reto de Alimentación Antiinflamatoria de 5 Dias</h3>
+      <div>
         <div className="systems-card-week week-card">
           <p onClick={() => showContent("day6")} style={{fontWeight: "bold", marginLeft: "5%"}}>Introducción {showArrow(showDay6)}</p>
           {showDay6 ? 
@@ -180,10 +180,18 @@ const PlanAntiinflamatorio = () => {
                 <p>Cena: Tortillas Mexicanas Anti-inflamatorias (con pollo, pico de gallo y aguacate)</p>
                 <p>Nota: Recuerda que este menú es una propuesta, pero puedes adaptarlo con alimentos que tengas en casa y que te gusten, siempre respetando las pautas de alimentación antiinflamatoria.</p>
               </div>
-              <a href="https://www.mesana.co/programa-avanzado"><button type="submit" style={{padding: "10px 20px", marginRight: "10px"}} className="primary-button full">Ver Programa Avanzado</button></a>
            </div>
             : ""
           }
+        </div>
+
+        <div style={{padding: "30px 0 30px 6%"}} className="systems-card-week week-card">
+          <p>El reto de 5 dias te ha dado una introducción a la alimentación antiinflamatoria y probablemente has comenzado a ver mejoras.</p>
+          <p>Pero cada cuerpo es diferente y reacciona de forma distinta a los alimentos. Por lo tanto necesitas seguir un plan personalizado.</p>
+          <p>Un plan que esté ajustado a tus condiciones, tu cuerpo y necesidades. Donde podrás ver mejoras más rápido, eliminar los síntomas y sentirte bien.</p>
+          <p style={{fontWeight: "bold"}}>Comienza el Programa de Desinflamación Personalizado por sólo $99</p>
+          <a href="https://www.mesana.co/programa-avanzado"><button type="button" style={{margin: '0px 0 20px 0', fontWeight: 'bold', padding: '12px' }} className="primary-button">Hacer Pago del programa</button></a>
+          <p style={{marginTop: "-10px"}}>Si tienes problemas o alguna duda puedes escribirme a mi Whatsapp <span style={{fontWeight: "bold"}}>+573115120932</span></p>
         </div>
       </div>
     </div>

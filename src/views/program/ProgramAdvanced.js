@@ -28,7 +28,7 @@ const ProgramAdvanced = () => {
           <li>Personalizarás tu alimentación probando tolerancia de aquellos alimentos que eliminaste durante el programa, reconociendo cuales son amigos y enemigos de tu cuerpo.</li>
         </ul>
       </div>
-      <p style={{marginBottom: '10px', color: '#00b300', fontSize: '40px'}}><strong>$120</strong></p>
+      <p style={{marginBottom: '10px', color: '#00b300', fontSize: '40px'}}><strong>$99</strong></p>
       <div id="paypal-programa-avanzado" style={{textAlign: 'center', marginTop: '5px'}}></div>
       <div style={{fontSize: '14px', textAlign: 'center'}}>
         <p>Si tienes problemas para completar el pago escríbeme a:</p>

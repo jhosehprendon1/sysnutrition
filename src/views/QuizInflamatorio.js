@@ -89,6 +89,8 @@ const QuizInflamatorio = ({sendScore}) => {
 
   return (
     <div className="container-center">
+      <h1>Evalúa tu Nivel de Inflamación</h1>
+      <p style={{marginBottom: "40px"}}>Completa el Quiz seleccionando la opción que refleje más tu condición</p>
       <div className="progress-bar">
         <ProgressBar completed={state.system === 6 ? 98 : Math.round((state.system+1)/7*100)} />
       </div>

@@ -1,11 +1,15 @@
 
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState } from 'react'
 import RoutesLiterals from "../RoutesLiterals";
+import { useForm } from "react-hook-form";
+import { connect } from 'react-redux';
+import { createContact } from '../store/actions';
+import { useHistory } from "react-router-dom";;
 
-const QuizInflamatorioResults = ({systemsScore}) => {
+const QuizInflamatorioResults = ({systemsScore, createContact, error}) => {
   const history = useHistory();
-
+  const { register, handleSubmit, errors } = useForm();
+  const [loading, setLoading] = useState(false);
 
   if (systemsScore.brain) {
     const brainScore = Object.values(systemsScore.brain).reduce((a, b) => a + b, 0)
@@ -46,6 +50,25 @@ const QuizInflamatorioResults = ({systemsScore}) => {
       if (systemScore >= 8) {
         return "score-severe"
       }
+    }
+
+    const renderSpinner = () => {
+      if(loading) {
+        return (
+          <div style ={{marginLeft: '10px'}} className="ui active inline loader"></div>
+        )
+      } else {
+        return null
+      }
+    }
+  
+    const onSubmit = (data) => {
+      setLoading(true)
+      createContact(data, 27, 28, history).then(() => {
+        setLoading(false)
+      }).catch(e => {
+        setLoading(false)
+      })
     }
   
     return (
@@ -116,16 +139,49 @@ const QuizInflamatorioResults = ({systemsScore}) => {
         </div>
         <div className="quiz-content-card-total">
         <p style={{marginTop: "20px", fontWeight: "bold"}}>Comienza a Ver Cambios Positivos en tu Cuerpo. <br></br>Reduce lo Síntomas y Vive Mejor.</p>
-        <p style={{fontWeight: "bold"}}>Lo puedes lograr con en el Plan de Alimentación Antiinflamatoria de 5 dias</p>
-          <p>En el Plan recibirás una Guia en PDF y videos que contienen:</p>
+        <p style={{fontWeight: "bold"}}>Lo puedes lograr con en el Reto de Alimentación Antiinflamatoria de 5 dias</p>
+          <hr></hr>
+          <p>En el Reto recibirás una Guia en PDF y videos que contienen:</p>
           <ul style={{textAlign: "left", fontSize: "16px", lineHeight: "25px"}}>
             <li>Menú de 5 dias con desayuno, almuerzo y cena</li>
             <li>Recetas e instrucciones de preparación</li>
             <li>Acceso a grupo privado de Facebook donde podrás aclarar tus dudas</li>
             <li>Videos donde aprenderás las bases de una alimentación antiinflamatoria y prácticas que te ayudarán a obtener resultados</li>
           </ul>
-          <p style={{marginTop: '20px', color: '#00b300', fontSize: '40px'}}><strong>$10</strong></p>
-          <a href="https://www.mesana.co/plan-payment"><button type="submit" className="primary-button" style={{padding: "10px 25px", margin: "-25px 0 18px 0"}}>Realizar Pago del Plan</button></a>
+          <hr></hr>
+          <p style={{marginTop: "20px"}}>Accede al Reto de Alimentación Antiinflamatoria Gratis</p>
+          <form className="form-plan" style={{marginTop: "10px"}} onSubmit={handleSubmit(onSubmit)}>
+            <label htmlFor="name" className="full" style={{textAlign: "left"}}>
+              <p>Nombre*</p>
+              <input
+                type='text'
+                placeholder='Ej.: Maria Lopez'
+                ref={register({ required: true })}
+                name='name'
+              />
+              <p className={errors.name ? "error error-visible" : "error error-hidden"}>Por favor ingresa tu nombre</p>
+            </label>
+            <label htmlFor="email" className="full" style={{textAlign: "left"}}>
+              <p>Email*</p>
+              <input
+                type='text'
+                placeholder='Ej.: maria@gmail.com'
+                ref={register({
+                  required: true,
+                  pattern: {
+                    value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    message: 'Invalid email address',
+                  },
+                })}
+                name='email'
+              />
+              <p className={errors.email ? "error error-visible" : "error error-hidden"}>Por favor ingresa un email valido</p>
+            </label>
+            <p style={{marginBottom: "1px"}} className={error ? "error error-visible" : "error error-hidden"}>El Email ya ha sido registrado o...</p>
+            <p className={error ? "error error-visible" : "error error-hidden"}>{error}</p>
+            <button type="submit" style={{marginBottom: "20px"}} className="primary-button full">Acceder al Reto</button>
+            {renderSpinner()}
+          </form>
         </div>
       </div>
     )
@@ -142,4 +198,10 @@ const QuizInflamatorioResults = ({systemsScore}) => {
   }
 };
 
-export default QuizInflamatorioResults;
+const mapStateToProps = (state) => {
+  return {
+    error: state.contact.error
+  }
+}
+
+export default connect(mapStateToProps, {createContact})(QuizInflamatorioResults)

@@ -17,6 +17,7 @@ import Login from './views/Login';
 import WelcomeProgram from './views/WelcomeProgram';
 import QuizInflamatorio from './views/QuizInflamatorio';
 import QuizInflamatorioResults from './views/QuizInflamatorioResults';
+import PlanGracias from './views/PlanGracias';
 import RetoPayment from './views/RetoPayment';
 import Quiz from './views/Quiz';
 import QuizResults from './views/QuizResults';
@@ -89,6 +90,7 @@ const App = () => {
         <Route exact path={RoutesLiterals.programaPersonalizadoGracias} component={ProgramaPersonalizadoGracias} />
         <Route exact path={RoutesLiterals.quizInflamatorio} component={() => <QuizInflamatorio sendScore={sendScore} />} />
         <Route exact path={RoutesLiterals.quizInflamatorioResults} component={() => <QuizInflamatorioResults systemsScore={systemsScore} />} />
+        <Route exact path={RoutesLiterals.planGracias} component={PlanGracias} />
         <Route exact path={RoutesLiterals.retoPayment} component={() => <RetoPayment/>} />
         <Route exact path={RoutesLiterals.planPayment} component={() => <PlanPayment/>} />
         <Route exact path={RoutesLiterals.planAntiinflamatorio} component={() => <PlanAntiinflamatorio/>} />
@@ -114,7 +116,7 @@ const App = () => {
         <PrivateRoute exact path={RoutesLiterals.week6} component={Week6} />
         <PrivateRoute exact path={RoutesLiterals.week7} component={Week7} />
         <PrivateRoute exact path={RoutesLiterals.week8} component={Week8} />
-        <Route path='/' exact component={RetoAntiinflamatorio} />
+        <Route path='/' exact component={() => <QuizInflamatorio sendScore={sendScore} />} /> />
         <Route exact path={RoutesLiterals.retoAntiinflamatorio} component={RetoAntiinflamatorio} />
         <Route exact path={RoutesLiterals.retoBienvenida} component={RetoBienvenida} />
         <Route exact path={RoutesLiterals.retoPreparativos} component={RetoPreparativos} />
